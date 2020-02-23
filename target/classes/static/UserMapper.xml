@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j.ssm.dao.UserMapper">
+    <!--    <select id="save" resultType="com.j.ssm.bean.UserBean">-->
+    <!--     SELECT  id,name,age FROM  student WHERE  id=#{id}-->
+    <!--    </select>-->
+    <!--    程序id-*-*-主键-自增-->
+<!--    parameterType="com.j.ssm.bean.UserBean"-->
+<!--    parameterType="com.j.ssm.bean.UserBean"-->
+    <insert id="saveD"  statementType="PREPARED"
+            keyProperty="id" useGeneratedKeys="true">
+        INSERT INTO `tb_user` (`NAME`, `AGE`) VALUES (#{name},#{age});
+    </insert>
+
+</mapper>

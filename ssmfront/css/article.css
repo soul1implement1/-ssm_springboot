@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.editor_but {
+    float: right;
+    margin-right: 10%;
+    margin-top: 10px;
+    width: 10%;
+    border: 1px solid #abcdef;
+    background-color: #333333;
+    border-radius: 15px;
+}
+
+.w-e-text-container {
+    height: 500px !important;
+    /*!important是重点，因为原div是行内样式设置的高度300px*/
+    width: 100%;
+}
+
+#mytitle {
+    width: 100%;
+    border-radius: 20px;
+    /* width: 80%;
+	margin-left: 10%; */
+}
+
+#mywords {
+    width: 70%;
+    border-radius: 5px;
+}
+
+.copyright {
+    padding: 0 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    clear: both;
+}

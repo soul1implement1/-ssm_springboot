@@ -1,0 +1,122 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+</head>
+
+<body>
+    <!-- 文件上传
+    <form id="file_upload" action="javascript:;" onsubmit="ajaxFileUpload()" enctype="multipart/form-data">
+        Files: <input type="file" id="file" name="file"><br><br>
+        <input type="submit" value="Submit" />
+    </form> -->
+    <!-- 验证码 -->
+    <button onclick="ajaxFileUpload()">下载文件</button>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery/jquery.cookie.js"></script>
+    <script>
+        // $("#file_upload").onsubmit(function() {
+        //         alert()
+        //             // ajaxFileUpload()
+        //     })
+        //     // ajaxFileUpload()
+
+        function ajaxFileUpload() {
+            window.open("http://localhost:4800/my/download?resid=39")
+                // //   下载文件
+                // $.ajax({
+                //     type: "get",
+                //     url: "http://localhost:4800/my/download",
+                //     async: false,
+                //     data: {
+                //         "resid": "20"
+                //     },
+                //     xhrFields: {
+                //         withCredentials: true
+                //     },
+                //     crossDomain: true,
+                //     dataType: "application/octet-stream", //作用
+                //     success: function(data) {
+                //         //文件下载方法
+
+            //     },
+            //     error: function(XMLHttpRequest, textStatus, errorThrown, data) {
+            //         console.log(errorThrown);
+            //         console.log(XMLHttpRequest)
+            //     }
+            // });
+        }
+
+        // 上传文件
+        //         $.ajax({
+        //     type: "post",
+        //     url: url + "registerCode",
+        //     xhrFields: {
+        //         withCredentials: true
+        //     },
+        //     crossDomain: true,
+        //     dataType: "text",
+        //     success: function(result) {
+        //         console.log(result)
+        //     },
+        //     error: function() {
+        //         console.log("error")
+        //     }
+        // })
+        // //验证码
+        // $.ajax({
+        //     type: "get",
+        //     url: url + "registerCode",
+        //     data: {
+        //         "email": "1260740374@qq.com"
+        //     },
+        //     xhrFields: {
+        //         withCredentials: true
+        //     },
+        //     crossDomain: true,
+        //     dataType: "text",
+        //     success: function(result) {
+        //         console.log(result)
+        //     },
+        //     error: function() {
+        //         console.log("error")
+        //     }
+        // })
+
+
+        // // 注册
+        // $.ajax({
+        //     type: "post",
+        //     url: url + "register",
+        //     data: {
+        //         "vcode": "60403", //邮箱
+        //         "college": "数信院",
+        //         "prof": "信计",
+        //         "name": "用户-冯玖霖",
+        //         "password": "root",
+        //         "email": "3399817710@qq.com"
+        //     },
+        //     xhrFields: {
+        //         withCredentials: true
+        //     },
+        //     crossDomain: true,
+        //     dataType: "text",
+        //     success: function(result) {
+        //         console.log(result)
+        //     },
+        //     error: function() {
+        //         console.log("error")
+        //     }
+        // })
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
+    <script type="text/javascript">
+        L2Dwidget.init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>登录/注册</title>
+		<link rel="stylesheet" href="css\style.css">
+		<link rel="stylesheet" href="layui/css/layui.css"  media="all"/>
+		<link
+		<link rel="stylesheet" href="layui/css/modules/laydate/default/laydate.css" />
+		<script src="layui/layui.all.js"></script>
+	 
+
+		
+	</head>
+	<body>
+		<div class="container">
+			<img src="img/bc.jpg" >
+			<div class="panel">
+				<div class="content login ">
+					<div class="switch">
+						<span id="login" class="active">登录</span><span>/</span><span id='signup'>注册</span>
+					</div>
+					<form action="javasrcipt:;" >
+						
+						<div  class="input" placeholder='邮箱' id="email1" style="display: none;" >
+							<input id="email" type="text" > 					
+						</div>
+						<button id="hqyzm"  style="display: none;" onclick="registercode()">点击获取验证码</button>
+						<div class="input" placeholder='用户名'><input type="text" id="name" >  </div>
+						<div class="input" placeholder='密码'><input type="password"  id="password" onblur="renew()">  </div>
+						
+						<div class="input"  id="yx" style="display: none;"><select type="text" id="college" style="width: 200px;height: 30px; border: 2px solid  rgb(181,154,254);" ></select>  </div>
+						<div  class="input" id="zy" style="display: none;"><select type="text" id="prof" style="width: 200px;height: 30px; border: 2px solid  rgb(181,154,254);" ></select>  </div>
+						<span id="wjmm">忘记密码?</span><br>
+						<div id='yzm' onclick="renew()">
+						<img id="img" style="width: 200px; height: 60px;background:plum;"/>
+							
+						</div>
+						<div class="input" placeholder='请输入验证码' id="tpyz" ><input type="text" id="tpyzm" >  </div>
+						<div class="input" placeholder='请输入邮箱验证码' id="yxyz" style="display: none;"><input type="text" id="yxyzm" >  </div>
+						<button id="LOGIN" class="button"  onclick="login()">登录</button>
+						<button id="SIGNUP" style="display: none;" class="button" onclick="signup()">注册</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+	<script src="js/login.js"></script>
+</html>

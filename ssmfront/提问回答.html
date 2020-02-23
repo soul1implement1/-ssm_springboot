@@ -1,0 +1,97 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+</head>
+
+<body>
+    <input id="content" placeholder="提问内容">
+    <button onclick="postQ()">提问内容</button>
+    <input id="contenta" placeholder="回答内容">
+    <input id="qid" placeholder="回答问题ID">
+    <button onclick="postA()">回答内容</button>
+    <script src="js/jquery.min.js"></script>
+    <script src="layui/layui.all.js"></script>
+    <script>
+        let url = "http://localhost:4800/";
+
+        function postQ() {
+            var c = $("#content").val()
+            if (c.length < 8) {
+
+                layer.msg("回复内容不少于8个字", {
+                    time: 1500,
+                    icon: 2
+                }, function() {});
+                return false;
+            }
+            $.ajax({
+                type: "post",
+                url: url + "my/question",
+                data: {
+                    "content": c
+                },
+                xhrFields: {
+                    withCredentials: true
+                },
+                crossDomain: true,
+                dataType: "text",
+                success: function(result) {
+                    if (result === "SUCCESS") {
+                        layer.msg("发表成功", {
+                            time: 1500,
+                            icon: 1
+                        }, function() {});
+                    } else {
+                        layer.msg("发表失败", {
+                            time: 1500,
+                            icon: 2
+                        }, function() {});
+                    }
+                }
+            })
+        }
+
+        function postA() {
+            var c = $("#contenta").val()
+            if (c.length < 8) {
+                layer.msg("回复内容不少于8个字", {
+                    time: 1500,
+                    icon: 2
+                }, function() {});
+                return false;
+            }
+            $.ajax({
+                type: "post",
+                url: url + "my/answer",
+                data: {
+                    "qid": $("#qid").val(), //问题id
+                    "content": c + new Date().getTime()
+                },
+                xhrFields: {
+                    withCredentials: true
+                },
+                crossDomain: true,
+                dataType: "text",
+                success: function(result) {
+                    if (result === "SUCCESS") {
+                        layer.msg("评论成功", {
+                            time: 1500,
+                            icon: 1
+                        }, function() {});
+                    } else {
+                        layer.msg("评论失败", {
+                            time: 1500,
+                            icon: 2
+                        }, function() {});
+                    }
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

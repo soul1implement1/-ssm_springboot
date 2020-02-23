@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <style>
+        .head {
+            margin-top: 10px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 26px;
+            color: #0e0101;
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head"> 管理密码</div>
+    <div class="layui-tab layui-tab-brief" lay-filter="demo">
+
+        <div class="layui-tab-content" style="height: 100px; display: block">
+            <div class="layui-tab-item layui-show">
+                <div class="layui-form-item">
+                    <form class="layui-form" action="" id="passForm">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">原始密码</label>
+                            <div class="layui-input-inline">
+                                <input type="password" name="oldPassword" id="oldPassword" lay-verify="required" placeholder="请输入旧密码" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">新密码</label>
+                            <div class="layui-input-inline">
+                                <input type="password" name="newPassword" id="newPassword" lay-verify="required" placeholder="请输入新密码" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">ID</label>
+                            <div class="layui-input-inline">
+                                <input type="password" name="ID" id="ID" lay-verify="required" placeholder="请输入账号ID" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit lay-filter="change" id="change">确认</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="../js/nginx.js"></script>
+    <script type="text/javascript" src="../layui/layui.all.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/back/update/password.js"></script>
+
+</body>
+
+</html>

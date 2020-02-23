@@ -1,0 +1,20 @@
+@charset "UTF-8";
+body {
+    padding: 0px;
+    height: 100%;
+    background-image: url(../img/bg2.jpg);
+    background-size: 100%;
+    line-height: 1.5;
+    font-weight: 800;
+    font-size: 17px;
+    margin-bottom: 80px;
+}
+
+.head {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 26px;
+    color: #0e0101;
+    background-color: whitesmoke;
+}

@@ -1,0 +1,114 @@
+body {
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: 0px;
+    font-size: 17px;
+    margin-bottom: 80px;
+    background-color: #3FFFF8;
+}
+
+.time {
+    float: right;
+    color: blueviolet;
+}
+
+#content {
+    border: 2px #f0eaea solid;
+}
+
+
+/*blogbox*/
+
+.blogbox {
+    width: 70%;
+    float: left;
+}
+
+.bloglist {
+    margin: 20px;
+    overflow: hidden;
+    border: 1px solid #E1E1E1;
+    background: #fff
+}
+
+.bloglist li {
+    overflow: hidden
+}
+
+.bloglist h2 {
+    border-top: 1px solid rgb(226, 185, 185);
+    border-bottom: 1px solid #eee;
+    background: #FDFDFD;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    padding-left: 20px;
+    position: relative
+}
+
+.bloglist h2:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: #09b1b9
+}
+
+.bloglist li:hover h2 a {
+    color: rgb(3, 73, 77)
+}
+
+.bloglist li:nth-child(1) h2 {
+    border-top: 0
+}
+
+.bloglist li i {
+    display: block;
+    float: right;
+    width: 20%;
+    margin: 20px
+}
+
+.bloglist li i img {
+    width: 100%
+}
+
+.blogtext {
+    margin: 20px 0 20px 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    background-color: rgb(188, 252, 250);
+}
+
+.bloginfo {
+    margin-left: 20px;
+}
+
+.bloginfo span {
+    padding-left: 20px;
+}
+
+.bloginfo span,
+.bloginfo span a:hover {
+    color: rgb(208, 185, 214)
+}
+
+.bloginfo span:nth-child(1) {
+    color: blueviolet;
+    background: url(../img/dz.png) no-repeat left center
+}
+
+.bloginfo span:nth-child(2) {
+    color: blueviolet;
+    background: url(../img/ll.png) no-repeat left center
+}
+
+.bloginfo span:nth-child(3) {
+    color: black;
+    background: url(../img/bq.png) no-repeat left center
+}
